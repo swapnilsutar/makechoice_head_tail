@@ -2,22 +2,29 @@
 const btn = document.querySelector('#btn');
 const coin = document.querySelector('.coin');
 
-btn.addEventListener("click",function(){
 
+
+function deferFn(callback, ms) {
+    setTimeout(callback, ms); 
+  }
+  
+
+function flipme(){
+
+    coin.setAttribute('class','')
     const rand = Math.random()
 
-    if(rand < 0.5){
-        coin.setAttribute("class","coin anim-heads");
-    }
-    else{
-        coin.setAttribute("class","coin anim-tails");
-    }
-    
-});
+    const result = rand<0.5?"heads":"heads";
 
-// btn.addEventListener('click', function(){
-//     coin.classList.add('coin anim-heads');
-//     setTimeout(() => {
-//         coin.classList.remove("coin anim-heads");
-//     },500)
-// });
+    document.getElementById("done").innerHTML=result;
+
+    
+    deferFn(function() {
+        coin.setAttribute('class', 'coin anim-' + result);
+        deferFn(processResult.bind(null, result), 2900);
+      },1);
+
+
+}
+
+btn.addEventListener("click",flipme);

@@ -42,7 +42,7 @@
 }
 
 .anim-heads{
-    animation:flip 10s;
+    animation:flip 1s;
     animation-fill-mode: forwards;
 }
 @keyframes flip{
@@ -50,11 +50,11 @@
         transform:rotateY(0deg);
     }
     to{
-        transform:rotateY(180deg);
+        transform:rotateY(1800deg);
     }
 }
 .anim-tails{
-    animation:flip1 10s;
+    animation:flip1 1s;
     animation-fill-mode: forwards;
 }
 @keyframes flip1{
@@ -62,6 +62,6 @@
         transform:rotateY(0deg);
     }
     to{
-        transform:rotateY(360deg);
+        transform:rotateY(1980deg);
     }
 }
