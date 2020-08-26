@@ -4,6 +4,7 @@ const coin = document.querySelector('.coin');
 
 
 
+
 function deferFn(callback, ms) {
     setTimeout(callback, ms); 
   }
@@ -14,9 +15,12 @@ function flipme(){
     coin.setAttribute('class','')
     const rand = Math.random()
 
-    const result = rand<0.5?"heads":"heads";
+    const result = rand<0.5?"heads":"tails";
 
-    document.getElementById("done").innerHTML=result;
+    // if(t==result){
+      // document.getElementById("done").style.transitionDelay = "5s";
+      
+    // alert(document.getElementById("done").innerHTML=result);
 
     
     deferFn(function() {

@@ -1,3 +1,8 @@
+body{
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 50%);
+    height:100vh;
+    /* background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); */
+}
 .coin{
     height: 200px;
     width: 200px;
@@ -39,29 +44,41 @@
     padding:20px;
     background-color: gray;
     color:white;
+    border: none;
+    font-size:20px;
+    
 }
 
+
 .anim-heads{
-    animation:flip 1s;
+    animation:flip 2s;
     animation-fill-mode: forwards;
 }
 @keyframes flip{
     from{
         transform:rotateY(0deg);
+        background-color: rgba();
     }
     to{
         transform:rotateY(1800deg);
     }
 }
 .anim-tails{
-    animation:flip1 1s;
+    animation:flip1 2s;
     animation-fill-mode: forwards;
 }
 @keyframes flip1{
     from{
         transform:rotateY(0deg);
     }
-    to{
+    to{        
         transform:rotateY(1980deg);
     }
+}
+
+#done{
+    text-transform:uppercase ;
+    font-weight: bold;
+    font-size: 50px;
+    /* transition-delay: 5s; */
 }
