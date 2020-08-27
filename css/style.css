@@ -1,9 +1,11 @@
 body{
-    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 50%);
+    background: linear-gradient(110deg, #fdb93b 60%, #fff27c 50%);
     height:100vh;
     /* background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); */
 }
+
 .coin{
+    margin-top:40%;
     height: 200px;
     width: 200px;
     /* border-radius: 50% */
@@ -24,55 +26,62 @@ body{
 
 .heads{
     /* background-color: wheat; */
-    transform:rotateY(180deg);
-    background-image: url('../images/Picture1.png');
-    background-attachment: fixed;
+    transform:rotateX(180deg);
+    background-image: url('../images/Picture2.png');
+    background-attachment: initial;
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
 }
 .tails{
     /* background-color:salmon; */
-    transform:rotateY(360deg);
-    background-image: url('../images/Picture2.png');
-    background-attachment: fixed;
+    transform:rotateX(360deg);
+    background-image: url('../images/Picture1.png');
+    background-attachment: initial;
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
+
 }
 #btn{
     padding:20px;
-    background-color: gray;
+    background-color: rgb(0, 138, 0);
+    border-radius: 5px;
     color:white;
     border: none;
-    font-size:20px;
-    
+    font-size:25px;
+    font-weight: 600;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#btn:hover{
+    background-color: rgb(4, 87, 4);
 }
 
-
 .anim-heads{
-    animation:flip 2s;
+    animation:flip 4s;
     animation-fill-mode: forwards;
+
 }
 @keyframes flip{
     from{
         transform:rotateY(0deg);
-        background-color: rgba();
     }
     to{
-        transform:rotateY(1800deg);
+        transform:rotateX(1800deg);
     }
 }
 .anim-tails{
-    animation:flip1 2s;
+    animation:flip1 4s;
     animation-fill-mode: forwards;
+    
+    
 }
 @keyframes flip1{
     from{
-        transform:rotateY(0deg);
+        transform:rotateX(0deg);
     }
-    to{        
-        transform:rotateY(1980deg);
+    to{         
+        transform:rotateX(1980deg);
     }
 }
 
